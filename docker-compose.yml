@@ -1,0 +1,12 @@
+services:
+  lookyloo:
+    image: lookyloo
+    container_name: lookyloo
+    volumes:
+      - ./lookyloo/scraped:/app/lookyloo/scraped
+      - ./lookyloo/archived_captures:/app/lookyloo/archived_captures
+      - ./lookyloo/discarded_captures:/app/lookyloo/discarded_captures
+      - ./lookyloo/config:/app/lookyloo/config
+      - ./lookyloo/logs:/app/lookyloo/logs
+    ports:
+      - 5100:5100
